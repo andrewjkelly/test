@@ -38,7 +38,7 @@ app.post('/listen', function (req, res) {
 
 	// get message and sender from body
 
-	var message = ("This is Metrix Marketing, & this is a test.");
+	var message = ("This is Metrix Marketing, How may we help you?");
 	var sender = req.body['fromNumber'];
 
 	console.log("echoing text back to sender: " + sender + " with message: " + message);
