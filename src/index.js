@@ -48,20 +48,21 @@ app.post('/listen', function (req, res) {
 	
 	// response
 	
-	if (payload == "affiliate"){
+	var payload= req.body['payload']; if (payload == "affiliate"){
 		response=(msg2)
-	} if (payload == "client"){
+	} 
+	
+	if (payload == "client"){
 		response=(msg3)
-	} if (payload == "customer"){
+	} 
+	
+	if (payload == "customer"){
 		response=(msg4)
-	} else {
+	} 
+	
+	else {
 		response=(msg1)
-	}
-	
-	
-	
-	
-	
+	} response
 	
 	var message = response;
 	var sender = req.body['fromNumber'];
