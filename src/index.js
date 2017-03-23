@@ -38,7 +38,32 @@ app.post('/listen', function (req, res) {
 
 	// get message and sender from body
 
-	var message = req.body['payload'];
+	var payload = req.body['payload'];
+	var response = ();
+	// list of responses
+	var msg1 = "You have successfully reached Metrix Marketing, please state who you are \( affiliate, client, customer\)";
+	var msg2 = "Welcome affiliate,";
+	var msg3= "Welcome Client,";
+	var msg4= "Welcome Customer,";
+	
+	// response
+	
+	if (payload == "affiliate"){
+		response=(msg2)
+	} if (payload == "client"){
+		response=(msg3)
+	} if (payload == "customer"){
+		response=(msg4)
+	} else {
+		response=(msg1)
+	}
+	
+	
+	
+	
+	
+	
+	var message = response;
 	var sender = req.body['fromNumber'];
 
 	console.log("echoing text back to sender: " + sender + " with message: " + message);
