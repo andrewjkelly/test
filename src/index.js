@@ -37,8 +37,9 @@ app.post('/listen', function (req, res) {
 	}
 
 	// get message and sender from body
-var messya = req.body['payload'];
-	var message = messya();
+	var messya= req.body['payload'];
+	
+	var message = messya;
 	var sender = req.body['fromNumber'];
 
 	console.log("echoing text back to sender: " + sender + " with message: " + message);
