@@ -40,7 +40,9 @@ app.post('/listen', function (req, res) {
 
 	var payload = req.body['payload'];
 	var response = ();
+	
 	// list of responses
+	
 	var msg1 = "You have successfully reached Metrix Marketing, please state who you are \( affiliate, client, customer\)";
 	var msg2 = "Welcome affiliate,";
 	var msg3= "Welcome Client,";
@@ -48,21 +50,15 @@ app.post('/listen', function (req, res) {
 	
 	// response
 	
-	var payload= req.body['payload']; if (payload == "affiliate"){
-		response=(msg2)
-	} 
-	
-	if (payload == "client"){
-		response=(msg3)
-	} 
-	
-	if (payload == "customer"){
-		response=(msg4)
-	} 
-	
-	else {
-		response=(msg1)
-	} response
+	if (payload == "affiliate"){
+		response=(msg2);
+	} if (payload == "client"){
+		response=(msg3);
+	} if (payload == "customer"){
+		response=(msg4);
+	} else {
+		response=(msg1);
+	}
 	
 	var message = response;
 	var sender = req.body['fromNumber'];
