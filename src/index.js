@@ -233,7 +233,7 @@ app.post('/listen', function (req, res) {
 
 	var payload= req.body['payload']; if(payload == "affiliate"){
 		message=(m2);
-	} else if(payload == 3122<4124){
+	} else if(3122<payload<4124){
 		message=(m4);
 	} else if(payload == "AFFILIATE JOIN"){
 		message=(m3);
