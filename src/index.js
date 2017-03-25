@@ -37,7 +37,7 @@ app.post('/listen', function (req, res) {
 	}
 
 	// get message and sender from body
-	var message=();
+	var message= null;
 	
 	// list of responses
 	
@@ -48,16 +48,16 @@ app.post('/listen', function (req, res) {
 	
 	// response
 	
-	var payload= req.body['payload']; if(payload = "affiliate"){
+	var payload= req.body['payload']; if(payload == "affiliate"){
 		message=(msg2);
-	} if(payload = "client"){
+	} else if(payload == "client"){
 		message=(msg3);
-	} if(payload = "customer"){
+	} else if(payload == "customer"){
 		message=(msg4);
 	} else {
 		message=(msg1);
-	};
-
+	}
+	
 	var sender = req.body['fromNumber'];
 
 	console.log("echoing text back to sender: " + sender + " with message: " + message);
